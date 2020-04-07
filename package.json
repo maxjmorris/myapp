@@ -1,0 +1,16 @@
+{
+    "name": "project-1",
+    "version": "1.0.0",
+    "description": "Testing for project 1",
+    "main": "index.js",
+
+    "keywords": [],
+    "author": "Max M",
+    "license": "ISC",
+    "dependencies": 
+    {
+        "express": "4.16.1",
+        "mongoose": "5.9.7"
+    }
+
+}
