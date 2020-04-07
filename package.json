@@ -3,7 +3,9 @@
     "version": "1.0.0",
     "description": "Testing for project 1",
     "main": "index.js",
-
+    "scripts": {
+        "start": "node app"
+    },
     "keywords": [],
     "author": "Max M",
     "license": "ISC",
