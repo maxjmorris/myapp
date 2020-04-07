@@ -5,7 +5,7 @@ const app = express();
 
 //Load view
 app.set('views',path.join(__dirname,'views'));
-app.set('view endgine', 'pug')
+app.set('view engine', 'pug')
 
 //home route
 app.get('/', function(req,res)
