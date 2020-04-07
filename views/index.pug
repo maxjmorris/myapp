@@ -4,5 +4,15 @@ html
       title My Project
     body
      h1 Hello this is my project
-       a(class='button', href='localhost/signup')
- 
+      form(method='POST' action='/')
+        div.form-group
+          label(for='firstname') First Name:
+          input#name.form-control(type='text',placeholder='Please Enter your First name' name='firstname')
+        div.form-group
+          label(for='lastname') Last Name:
+          input#name.form-control(type='text',placeholder='Please Enter Last name' name='lastname')
+        div.form-group
+          label(for='location') Location:
+          input#name.form-control(type='text',placeholder='Please Enter your Location' name='location')                
+            
+       
