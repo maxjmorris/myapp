@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+      title Sign Up
+//Register form going to be used for the mongodb connection
+form(method='POST' action='/')
+  div.form-group
+    label(for='firstname') First Name: 
+    br
+    input#name.form-control(type='text',placeholder='Please Enter your First name' name='firstname')
+  div.form-group
+    label(for='lastname') Last Name:
+    br
+    input#name.form-control(type='text',placeholder='Please Enter Last name' name='lastname')
+  div.form-group
+    label(for='location') Location:
+    br
+    input#name.form-control(type='text',placeholder='Please Enter your Location' name='location')        
