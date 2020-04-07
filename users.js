@@ -7,7 +7,7 @@ const schema
     location: {type: mongoose.SchemaTypes.String, required: true }
 
 };
-
+//User collection to store first name, last name and location
 const collectionName = "user"; //User Collection 
 const userSchema = mongoose.Schema(schema);
 const User = mongoose.model(collectionName,userSchema);
