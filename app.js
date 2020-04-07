@@ -4,7 +4,7 @@ const path = require('path')
 const app = express();
 
 //Load view
-app.set('views',path.join(_dirname,'views'));
+app.set('views',path.join(__dirname,'views'));
 app.set('view endgine', 'pug')
 
 //home route
