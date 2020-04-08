@@ -2,8 +2,19 @@ const express = require('express');
 const path = require('path')
 //Init app
 const app = express();
-const targetBaseUrl = 'http://project1.com'
+var mongoose = require('mongoose')
 
+
+mongoose.connect('mongodb://localhost/myapp_db', {useNewUrlParser : true});
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error'));
+db.once('open', function(){
+  //should be connected
+});
+
+//Connect to models
+let users = require('./models/users')
 //Load view
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine', 'pug')
