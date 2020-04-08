@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 
 mongoose.connect('mongodb://localhost/myapp_db', {useNewUrlParser : true});
 
-var db = mongoose.connection;
+let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
 db.once('open', function(){
   //should be connected
@@ -15,7 +15,8 @@ db.once('open', function(){
 });
 
 //Connect to models
-let users = require('./models/users')
+let Users = require('./models/users')
+
 //Load view
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine', 'pug')
