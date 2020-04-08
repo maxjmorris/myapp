@@ -25,5 +25,3 @@ function handleRedirect(req, res){
   const targetUrl = targetBaseUrl + req.originalUrl;
   res.redirect(targetUrl);
 }
-
-app.
