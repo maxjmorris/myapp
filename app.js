@@ -53,7 +53,7 @@ app.get('/SignUp',function(req,res){
 
 
 //Add submit to POST route
-app.post('/',function(req,res){
+app.post('/signup',function(req,res){
   let user = new Users();
   user.firstname = req.body.firstname;
   user.lastname = req.body.lastname;
