@@ -13,6 +13,9 @@ var userSchema = new mongoose.Schema({
   firstname : String,
   lastname : String,
   location : String
+},
+{
+  versionKey: false // set version key to false  
 });
 
 
