@@ -23,7 +23,7 @@ var userSchema = new mongoose.Schema({
 });
 
 
-let Users = modules.exports = mongoose.model('Users', userSchema)
+let Users = module.exports = mongoose.model('Users', userSchema)
 
 
 var firstUser = new Users({firstname:'Max',lastname:'Morris',Location:'London'})
