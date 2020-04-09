@@ -42,6 +42,16 @@ function handleRedirect(req, res){
   res.redirect(targetUrl);
 }
 
+//Add route
+app.get('/SignUp',function(req,res){
+  res.render('signup',
+{
+  title : 'Sign Up'
+});
+});
+
+
+
 //Add submit to POST route
 app.post(' ',function(req,res){
   let user = new Users();
