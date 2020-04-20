@@ -5,7 +5,7 @@ const app = express();
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
 
-mongoose.connect('mongodb://localhost/myapp_db', {useNewUrlParser : true});
+mongoose.connect('mongodb://localhost:27017/myapp_db', {useNewUrlParser : true});
 
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
@@ -53,7 +53,7 @@ app.get('/SignUp',function(req,res){
 
 
 //Add submit to POST route
-app.post('/SignUp',function(req,res){
+app.post('/signup',function(req,res){
   let user = new Users();
   user.firstname = req.body.firstname;
   user.lastname = req.body.lastname;
@@ -67,7 +67,7 @@ app.post('/SignUp',function(req,res){
   }
   else {
     {
-      res.redirect('/')
+      res.send("User saved to the database")
     }
   }
 })
