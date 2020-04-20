@@ -43,7 +43,7 @@ function handleRedirect(req, res){
 }
 
 //Add route
-app.get('/SignUp',function(req,res){
+app.get('/signup',function(req,res){
   res.render('signup',
 {
   title : 'Sign Up'
@@ -53,13 +53,13 @@ app.get('/SignUp',function(req,res){
 
 
 //Add submit to POST route
-app.post('/SignUp',function(req,res){
+app.post('/signup',function(req,res){
   let user = new Users();
   user.firstname = req.body.firstname;
   user.lastname = req.body.lastname;
   user.location = req.body.location;
 
-  user.save(function()
+  user.save(function(err)
 {
   if(err){
     console.log(err);
@@ -67,7 +67,7 @@ app.post('/SignUp',function(req,res){
   }
   else {
     {
-      res.redirect('/')
+    res.redirect('/')
     }
   }
 })
