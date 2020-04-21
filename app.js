@@ -89,7 +89,7 @@ app.post('/signup',function(req,res){
   }
   else {
     {
-    res.send("User "+user.firstname+" " +user.lastname+" has been saved to the databse")
+    //res.send("User "+user.firstname+" " +user.lastname+" has been saved to the databse")
     res.redirect('/')
     }
   }
