@@ -42,21 +42,27 @@ function handleRedirect(req, res){
   res.redirect(targetUrl);
 }
 
-//Add route
+//Redirect to Sign Up page
 app.get('/signup',function(req,res){
   res.render('signup',
 {
   title : 'Sign Up'
 });
 });
-
+//Redirect to show users page
 app.get('/users',function (req,res) {
   res.render('showusers',
 {
-  title: 'Users'
+  title: 'Show Users'
 });
 });
 
+app.get('/FindAUser',function(req,res) {
+  res.render('findusers',
+{
+  title: 'Find A User'
+});
+});
 
 
 //Add submit to POST route
