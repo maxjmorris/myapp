@@ -65,7 +65,6 @@ app.get('/users', function(req,res)
     res.render('showusers',
   {
     title:'Show Users',
-    users: users
   });
 
 });
