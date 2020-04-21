@@ -2,4 +2,7 @@ doctype html
 html 
     head 
       title Users
-      h1 Users
+      h1 #{title}
+      ul
+        each user, i in Users
+          li = user.firstname + user.lastname 
