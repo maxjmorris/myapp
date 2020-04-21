@@ -50,7 +50,7 @@ app.get('/signup',function(req,res){
 });
 });
 //Redirect to show users page
-app.get('/FindAUser',function (req,user) {
+app.get('/FindAUser',function (req,res) {
   res.render('findusers',
 {
   title: 'Find A User'
@@ -58,15 +58,16 @@ app.get('/FindAUser',function (req,user) {
 });
 
 //Find user route
-app.get('/users', function(req,users)
+app.get('/users', function(req,res)
 {
   Users.find({}, function(err, users){
+  });
     res.render('showusers',
   {
     title:'Show Users',
     users: users
   });
-});
+
 });
 
 
