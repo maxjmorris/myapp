@@ -50,6 +50,13 @@ app.get('/signup',function(req,res){
 });
 });
 
+app.get('/users',function (req,res) {
+  res.render('users',
+{
+  title: 'Users'
+});
+});
+
 
 
 //Add submit to POST route
