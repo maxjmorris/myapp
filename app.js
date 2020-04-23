@@ -93,5 +93,14 @@ app.post('/signup',function(req,res){
     res.redirect('/')
     }
   }
-})
-})
+});
+});
+
+
+//Number Range route
+app.get('/NumberRange', function (req,res) {
+  res.render('numberrange',
+  {
+    title: 'Number Range'
+  });
+});
