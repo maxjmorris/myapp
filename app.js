@@ -1,5 +1,10 @@
 const express = require('express');
-const path = require('path')
+const path = require( 'path')
+
+
+//Use python shell for script
+const PythonShell = require('python-shell')
+const pyshell = new PythonShell(myPythonScriptPath);
 //Init app
 const app = express();
 const mongoose = require('mongoose')
