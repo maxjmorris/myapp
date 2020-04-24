@@ -3,4 +3,13 @@ html
     head
     title number range
     h1 #{title}
-    
+    //Create number range form
+    form(method='POST' action='/numberrange')
+    div.form-group
+    label(for='EnterNumber') Please Enter a Number
+    br
+    br
+    input#name.form-control(type='text',placeholder='Please Enter A Number' name='Enter_Number')
+    br
+    br
+    button.btn.btn-primary(type='submit') Submit
