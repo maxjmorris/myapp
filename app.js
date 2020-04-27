@@ -108,3 +108,23 @@ app.get('/NumberRange', function (req,res) {
 });
 
 
+//Test for call name
+app.get('/name', callName);
+
+function callName(req, res)
+{
+  //Use the child process
+  var spawn = require("child_process").spawn;
+
+
+  var process = spawn('python', ["./call_name.py",
+req.query.firstname,req.query.lastname]);
+
+
+process.stdout.on('data', function(data)
+{
+  res.send(data.toString());
+})
+}
+
+
