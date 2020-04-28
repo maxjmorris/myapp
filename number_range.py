@@ -10,7 +10,6 @@ def number_range(number):
 
 #print(number_range(50))
 
-print(number_range(sys.argv[1])
-
+print(number_range(sys.argv[1]))
 
 
