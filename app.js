@@ -17,7 +17,10 @@ db.once('open', function(){
 });
 
 //Connect to models
-let Users = require('./models/users')
+let Users = require('./models/users');
+
+//Connect to scripts
+var Scripts = require("./scripts");
 
 //Load view
 app.set('views',path.join(__dirname,'views'));
@@ -112,7 +115,7 @@ app.post('/getnumber',getnumber);
 
 function getnumber(req,res)
 {
-  var number = req.body.number_range
+  var number = req.body.number
 
   //use child process
   var spawn = require("child_process").spawn;
