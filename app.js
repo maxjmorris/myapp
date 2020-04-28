@@ -132,12 +132,6 @@ function callName(req, res)
   //Use the child process
   var spawn = require("child_process").spawn;
 
-<<<<<<< HEAD
-  var process = spawn('pyton', ["./number_range.py",
-    req.query.number_range]);
-=======
->>>>>>> 549861b13798b93e33e427b43a1b6249cd99d542
-
   var process = spawn('python', ["./call_name.py",
 req.query.firstname,req.query.lastname]);
 
