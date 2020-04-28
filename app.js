@@ -100,12 +100,12 @@ app.post('/signup',function(req,res){
 
 
 //Number Range route
-// app.get('/NumberRange', function (req,res) {
-//   res.render('numberrange',
-//   {
-//     title: 'Number Range'
-//   });
-// });
+app.get('/NumberRange', function (req,res) {
+  res.render('numberrange',
+  {
+    title: 'Number Range'
+  });
+});
 
 // //Test python number range
 // app.post('/NumberRange',GetNumber);
