@@ -143,7 +143,7 @@ process.stdout.on('data', function(data)
 }
 
 //Test number range
-app.get('number',callNumber);
+app.get('/number',callNumber);
 
 function callNumber(req, res)
 {
