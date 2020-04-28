@@ -116,7 +116,7 @@ function GetNumber(req,res)
   var spawn = require("child_process").spawn;
 
   var process = spawn('pyton', ["./number_range.py",
-    req.body.number_range]);
+    req.query.number_range]);
 
 process.stdout('data', function(data)
 {
