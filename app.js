@@ -109,23 +109,29 @@ app.get('/NumberRange', function (req,res) {
   });
 });
 
-// //Test python number range
-app.post('/getnumber',getnumber);
-
-function getnumber(req,res)
+app.post('/getnumber', function(req,res)
 {
-  var number = req.body.number
-
-  //use child process
-  var spawn = require("child_process").spawn;
-
-  var process = spawn('python', ["./number_range.py",number]);
-
-process.stdout('data', function(data)
-{
- res.send(data.tostring());
+  res.redirect('/')
 })
-}
+
+
+// //Test python number range
+// app.post('/getnumber',getnumber);
+
+// function getnumber(req,res)
+// {
+//   var number = req.body.number
+
+//   //use child process
+//   var spawn = require("child_process").spawn;
+
+//   var process = spawn('python', ["./number_range.py",number]);
+
+// process.stdout('data', function(data)
+// {
+//  res.send(data.tostring());
+// })
+// }
 
 //Test for call name
 app.get('/name', callName);
