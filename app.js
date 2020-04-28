@@ -44,7 +44,7 @@ function handleRedirect(req, res){
   res.redirect(targetUrl);
 }
 
-//Redirect to Sign Up page
+//Sign up route
 app.get('/signup',function(req,res){
   res.render('signup',
 {
@@ -107,6 +107,22 @@ app.get('/NumberRange', function (req,res) {
   });
 });
 
+//Test python number range
+app.post('/NumberRange',GetNumber);
+
+function GetNumber(req,res)
+{
+  //Use child process
+  var spawn = require("child_process").spawn;
+
+  var process = spawn('pyton', ["./number_range.py",
+    req.body.number_range]);
+
+process.stdout('data', function(data)
+{
+ res.send(data.toString());
+})
+}
 
 //Test for call name
 app.get('/name', callName);
@@ -126,5 +142,6 @@ process.stdout.on('data', function(data)
   res.send(data.toString());
 })
 }
+
 
 
