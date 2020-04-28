@@ -19,8 +19,7 @@ db.once('open', function(){
 //Connect to models
 let Users = require('./models/users');
 
-//Connect to scripts
-var Scripts = require("./scripts");
+
 
 //Load view
 app.set('views',path.join(__dirname,'views'));
