@@ -116,12 +116,11 @@ app.post('/getnumber',getnumber);
 
 function getnumber(req,res)
 {
-  var number = req.body.number
 
   //use child process
   var spawn = require("child_process").spawn;
 
-  var process = spawn('python', ["./number_range.py",number]);
+  var process = spawn('python', ["./number_range.py",req.body.number]);
 
 process.stdout('data', function(data)
 {
