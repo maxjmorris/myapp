@@ -100,29 +100,29 @@ app.post('/signup',function(req,res){
 
 
 //Number Range route
-app.get('/NumberRange', function (req,res) {
-  res.render('numberrange',
-  {
-    title: 'Number Range'
-  });
-});
+// app.get('/NumberRange', function (req,res) {
+//   res.render('numberrange',
+//   {
+//     title: 'Number Range'
+//   });
+// });
 
-//Test python number range
-app.post('/NumberRange',GetNumber);
+// //Test python number range
+// app.post('/NumberRange',GetNumber);
 
-function GetNumber(req,res)
-{
-  //Use child process
-  var spawn = require("child_process").spawn;
+// function GetNumber(req,res)
+// {
+//   //Use child process
+//   var spawn = require("child_process").spawn;
 
-  var process = spawn('pyton', ["./number_range.py",
-    req.query.number_range]);
+//   var process = spawn('pyton', ["./number_range.py",
+//     req.body.number_range]);
 
-process.stdout('data', function(data)
-{
- res.send(data.toString());
-})
-}
+// process.stdout('data', function(data)
+// {
+//  res.send(data.toString());
+// })
+// }
 
 //Test for call name
 app.get('/name', callName);
@@ -132,10 +132,33 @@ function callName(req, res)
   //Use the child process
   var spawn = require("child_process").spawn;
 
+<<<<<<< HEAD
+  var process = spawn('pyton', ["./number_range.py",
+    req.query.number_range]);
+=======
+>>>>>>> 549861b13798b93e33e427b43a1b6249cd99d542
 
   var process = spawn('python', ["./call_name.py",
 req.query.firstname,req.query.lastname]);
 
+
+process.stdout.on('data', function(data)
+{
+  res.send(data.toString());
+})
+}
+
+//Test number range
+app.get('number',callNumber);
+
+function callNumber(req, res)
+{
+  //Use the child process
+  var spawn = require("child_process").spawn;
+
+  //use the number range python script
+  var process = spawn('python', ["./number_range.py",
+req.query.number_range]);
 
 process.stdout.on('data', function(data)
 {
