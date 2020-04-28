@@ -122,7 +122,7 @@ function getnumber(req,res)
 
   var process = spawn('python', ["./number_range.py",req.body.number]);
 
-process.stdout('data', function(data)
+process.stdout.on('data', function(data)
 {
  res.send(data.tostring());
 })
@@ -140,7 +140,7 @@ function callName(req, res)
 req.query.firstname,req.query.lastname]);
 
 
-process.stdout.on('data', function(data)
+process.stdout.on('data', function (data)
 {
   res.send(data.toString());
 })
