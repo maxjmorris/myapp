@@ -124,7 +124,7 @@ function getnumber(req,res)
 
 process.stdout.on('data', function(data)
 {
- res.send(data.tostring());
+ res.send(data.toString());
 })
 }
 
