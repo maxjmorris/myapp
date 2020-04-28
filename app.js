@@ -109,10 +109,10 @@ app.get('/NumberRange', function (req,res) {
   });
 });
 
-app.post('/getnumber', function(req,res)
+app.post('/getnumber', function (req, res)
 {
   res.redirect('/')
-})
+});
 
 
 // //Test python number range
