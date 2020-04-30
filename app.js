@@ -29,6 +29,8 @@ let Users = require('./models/users');
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine', 'pug')
 
+//Load Scripts
+app.set('scripts',path.join(__dirname,'scripts'));
 
 //Body parser middleware
 //parse application
