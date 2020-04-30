@@ -19,8 +19,6 @@ db.once('open', function(){
 //Connect to models
 let Users = require('./models/users');
 
-//Connect scripts
-let Scripts = require('./scripts');
 
 //Redirect HTTP to HTTPS
 // app.get("*", function(req,res)
@@ -129,7 +127,7 @@ function getnumber(req,res)
   //use child process
   var spawn = require("child_process").spawn;
 
-  var process = script.spawn('python', ["./number_range.py",req.body.number]);
+  var process = spawn('python', ["./number_range.py",req.body.number]);
 
 process.stdout.on('data', function(data)
 {
