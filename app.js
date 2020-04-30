@@ -20,10 +20,10 @@ db.once('open', function(){
 let Users = require('./models/users');
 
 //Redirect HTTP to HTTPS
-app.get("*", function(req,res)
-{
-  res.redirect("https://" + req.headers.host + req.url);
-});
+// app.get("*", function(req,res)
+// {
+//   res.redirect("https://" + req.headers.host + req.url);
+// });
 
 //Load view
 app.set('views',path.join(__dirname,'views'));
