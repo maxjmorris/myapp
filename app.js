@@ -123,7 +123,6 @@ app.post('/getnumber',getnumber);
 
 function getnumber(req,res)
 {
-  let script = new Scripts
   //use child process
   var spawn = require("child_process").spawn;
 
