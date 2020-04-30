@@ -19,7 +19,11 @@ db.once('open', function(){
 //Connect to models
 let Users = require('./models/users');
 
-
+//Redirect HTTP to HTTPS
+app.get("*", function(req,res)
+{
+  res.redirect("https://" + req.headers.host + req.url);
+});
 
 //Load view
 app.set('views',path.join(__dirname,'views'));
