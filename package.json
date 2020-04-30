@@ -4,7 +4,7 @@
     "description": "Testing for project 1",
     "main": "index.js",
     "scripts": {
-        "start": "node app"
+        "start": "nodemon app.js"
     },
     "keywords": [],
     "author": "Max M",
@@ -12,8 +12,9 @@
     "dependencies": {
         "body-parser": "^1.19.0",
         "express": "^4.17.1",
-        "mongodb": "^3.5.5",
+        "mongodb": "^3.5.7",
         "mongoose": "^5.9.10",
+        "nodemon": "^2.0.3",
         "pug": "^2.0.4"
     }
 }
