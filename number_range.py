@@ -13,11 +13,8 @@ def number_range(number):
         return "Please enter a number what you entered " + str(number) + " is not a number"
 
 
-print(number_range(30))
-print(number_range(50))
-print(number_range(201))
-print(number_range(70))
-print(number_range("MAX"))
+print(number_range(sys.argv[1]))
+
 
 
 
