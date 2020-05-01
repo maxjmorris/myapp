@@ -2,10 +2,13 @@ import sys
 
 
 def number_range(number):
-    if int(number) >= 50 and int(number) <= 200:
-        return "Number is valid"
+    if isinstance(number, int):
+        if int(number) >= 50 and int(number) <= 200:
+            return "Number is valid"
+        else:
+            return "Number is invalid"
     else:
-        return "Number is invalid"
+        return "Please enter a number"
 
 
 #print(number_range(50))
