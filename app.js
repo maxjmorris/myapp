@@ -4,10 +4,13 @@ const path = require( 'path')
 
 //Init app
 const app = express();
+//Connect to Mongoose to allow the mongo database on the web app
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
 
-mongoose.connect('mongodb://localhost:27017/myapp_db', {useNewUrlParser : true, useUnifiedTopology: true});
+//Connect to the database
+mongoose.connect('mongodb://localhost:27017/myapp_db', 
+{useNewUrlParser : true, useUnifiedTopology: true});
 
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
